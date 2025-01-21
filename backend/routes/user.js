@@ -130,4 +130,4 @@ userRouter.get("/bulk", async (req, res) => {
   });
 });
 //Exports
-module.exports = {userRouter};
+module.exports = { userRouter };

@@ -1,7 +1,6 @@
 const express = require("express");
 const { UserMiddleWare } = require("../middleware");
 const { User, Account } = require("../db");
-
 const accountRouter = express.Router();
 
 accountRouter.get("/balance", UserMiddleWare, async (req, res) => {

@@ -3,7 +3,8 @@ const express = require("express");
 const { User } = require("../db");
 const zod = require("zod");
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET } = require("../config");
+const {Account} = require("../db")
+const { JWT_SECRET } = "your-jwt-secret";
 const { UserMiddleWare } = require("../middleware");
 const userRouter = express.Router();
 
@@ -29,7 +30,7 @@ userRouter.post("/signup", async (req, res) => {
   const existingUser = await User.find({
     username: req.body.username,
   });
-  console.log(existingUser.length);
+  console.log(existingUser);
 
   if (existingUser.length > 0) {
     return res.status(411).json({

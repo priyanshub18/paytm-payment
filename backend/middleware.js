@@ -1,4 +1,4 @@
-const  {JWT_SECRET} = "your-jwt-secret"
+const {JWT_SECRET} = "your-jwt-secret"
 const {jwt} = require('jsonwebtoken')
 const UserMiddleWare = (req , res , next) => {
     const token = req.headers.authorization;
